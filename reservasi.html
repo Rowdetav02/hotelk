@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi</title>
+    <link rel="stylesheet" href="stylereser.css">
+</head>
+<body>
+    <header>
+        <h1>Reservasi Kamar</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><div class="home">
+                    <a href="menu.html">
+                        <span class="description">Home</span>
+                    </a>
+                </div>
+            </li>
+            <li><div class="tentangHotel">
+                    <a href="tentangHotel.html">
+                        <span class="description">About</span>
+                    </a>
+                </div>
+            </li><li><div class="infoHarga">
+                    <a href="infoHarga.html">
+                        <span class="description">Cost</span>
+                    </a>
+                </div>
+            </li><li><div class="reservasi">
+                    <a href="reservasi.html">
+                        <span class="description">Reservation</span>
+                    </a>
+                </div>
+            </li><li><div class="database">
+                    <a href="database.html">
+                        <span class="description">Database</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <section id="reservasi">
+                <h2>Form Reservasi</h2>
+                <form action="reservasi.php" method="post">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="telepon">Telepon:</label>
+                    <input type="text" id="telepon" name="telepon" required><br>
+                    <label for="checkin">Tanggal Check-in:</label>
+                    <input type="date" id="checkin" name="checkin" required><br>
+                    <label for="checkout">Tanggal Check-out:</label>
+                    <input type="date" id="checkout" name="checkout" required><br>
+                    <label for="tipe_kamar">Tipe Kamar:</label>
+                    <select id="tipe_kamar" name="tipe_kamar" required>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Executive Suite">Executive Suite</option>
+                        <option value="Presidential Suite">Presidential Suite</option>
+                    </select><br>
+                    <input type="submit" value="Reservasi">
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

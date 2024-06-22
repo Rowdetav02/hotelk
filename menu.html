@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZM Hotel Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function loadForm(url) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+
+        function loadtentangHotel() {
+            loadForm('tentangHotel.html');
+        }
+
+        function loadinfoHarga() {
+            loadForm('infoHarga.html');
+        }
+
+        function loadFormreservasi() {
+            loadForm('reservasi.html');
+        }
+        function dataPelanggan() {
+            loadForm('database.php');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1> ZM Hotel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><div class="home">
+                    <a href="menu.html">
+                        <span class="description">Home</span>
+                    </a>
+                </div>
+            </li>
+            <li><div class="tentangHotel">
+                    <a href="tentangHotel.html">
+                        <span class="description">About</span>
+                    </a>
+                </div>
+            </li><li><div class="infoHarga">
+                    <a href="infoHarga.html">
+                        <span class="description">Cost</span>
+                    </a>
+                </div>
+            </li><li><div class="reservasi">
+                    <a href="reservasi.html">
+                        <span class="description">Reservation</span>
+                    </a>
+                </div>
+            </li><li><div class="database">
+                    <a href="database.html">
+                        <span class="description">Database</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+        <img src="assets/hotel.jpg" alt="">                
+    </div>
+</body>
+</html>
